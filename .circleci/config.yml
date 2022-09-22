@@ -23,8 +23,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Run ANSIBLE"
-          command: "echo Running Ansible command"
+         name: "Run ANSIBLE"
+         command: "echo Running Ansible command"
             cd .circleci/ansible
             ansible-playbook main.yml
 
