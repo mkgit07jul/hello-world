@@ -28,6 +28,17 @@ jobs:
 
     steps:
       - checkout
+
+      # attach workspace
+      - attach_workspace:
+            at: ~/
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --update tar gzip ansible nodejs npm curl zip
+            pip install awscli
+            npm install
+            
       - run:
           name: "Say ansible"
           command: |
