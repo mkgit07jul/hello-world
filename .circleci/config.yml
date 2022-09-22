@@ -17,6 +17,19 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!, checking with update file"
+  
+  run-ansible:
+    # test to see running ansible commands
+    steps:
+      - checkout
+      - run:
+          name: Run ANSIBLE
+          command: |
+            "echo Running Ansible command"
+            cd .circleci/ansible
+            ansible-playbook main.yml
+
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -24,3 +37,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - run-ansible
