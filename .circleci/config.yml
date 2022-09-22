@@ -29,7 +29,8 @@ jobs:
           name: "Say ansible"
           command: | 
             "echo Running Ansible command"
-            cd .circleci/ansible
+            "echo another pring to ansible to check multiple command"
+          #  cd .circleci/ansible
            # ansible-playbook main.yml
 
 
