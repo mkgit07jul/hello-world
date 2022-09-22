@@ -30,7 +30,7 @@ jobs:
           command: | 
             "echo Running Ansible command"
             cd .circleci/ansible
-            ansible-playbook main.yml
+           # ansible-playbook main.yml
 
 
 
