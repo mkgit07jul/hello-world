@@ -23,6 +23,9 @@ jobs:
   
   run-ansible:
     # test to see running ansible commands
+    docker:
+      - image: cimg/base:stable
+      
     steps:
       - checkout
       - run:
