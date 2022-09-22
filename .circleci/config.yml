@@ -36,9 +36,9 @@ jobs:
           name: Install dependencies
           command: |
             apk add --update tar gzip ansible nodejs npm curl zip
-            pip install awscli
-            npm install
-            
+           # pip install awscli
+           # npm install
+
       - run:
           name: "Say ansible"
           command: |
