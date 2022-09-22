@@ -24,7 +24,7 @@ jobs:
   run-ansible:
     # test to see running ansible commands
     docker:
-      - image: cimg/base:stable
+      - image: python:3.10.7-alpine3.16
 
     steps:
       - checkout
