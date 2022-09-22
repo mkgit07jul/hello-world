@@ -25,15 +25,16 @@ jobs:
     # test to see running ansible commands
     docker:
       - image: cimg/base:stable
-      
+
     steps:
       - checkout
       - run:
           name: "Say ansible"
-          command: "echo Running Ansible command"
-          #  "echo another pring to ansible to check multiple command"
-#  cd .circleci/ansible
-# ansible-playbook main.yml
+          command: |
+          "echo Running Ansible command"
+          "echo another pring to ansible to check multiple command"
+          cd .circleci/ansible
+          ansible-playbook main.yml
 
 
 
