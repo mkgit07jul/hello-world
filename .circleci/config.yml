@@ -29,6 +29,10 @@ jobs:
     steps:
       - checkout
 
+      - add_ssh_keys:
+          fingerprints:
+              - "e3:1e:07:40:41:5f:c4:be:95:49:97:e6:8a:9a:ac:0c"
+
       # attach workspace
       - attach_workspace:
             at: ~/
@@ -36,8 +40,8 @@ jobs:
           name: Install dependencies
           command: |
             apk add --update tar gzip ansible nodejs npm curl zip
-           # pip install awscli
-           # npm install
+            pip install awscli
+            npm install
 
       - run:
           name: "Say ansible"
